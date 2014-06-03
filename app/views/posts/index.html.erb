@@ -1,14 +1,8 @@
 <h1>Blog Posts</h1>
-<h3>Sample Post One</h3>
-<p><%=@content_first %></p>
-<hr/>
+<% @posts.each do |post| %>
 
-<h1>Blog Posts</h1>
-<h3>Sample Post Two</h3>
-<p><%=@content_second %></p>
-<hr/>
+  <h3><%= link_to post.title, post %></h3>
+  <p><%= post.body %></p>
+  <hr>
 
-<h1>Blog Posts</h1>
-<h3>Sample Post Three</h3>
-<p>This is some sample text for new ror blog</p>
-<hr/>
+<% end %>

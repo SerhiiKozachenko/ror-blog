@@ -1,1 +1,3 @@
-<h1>Sample Post</h1>
+<h1><%= @post.title %></h1>
+<small><%= @post.created_at.strftime '%b %d. %Y' %></small>
+<p><%= @post.body %></p>
