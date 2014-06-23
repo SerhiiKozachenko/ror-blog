@@ -5,3 +5,9 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+# Add default categories if not exists
+Category.find_or_create_by name: 'News'
+Category.find_or_create_by name: 'Tutorials'
+Category.find_or_create_by name: 'Programming'
+Category.find_or_create_by name: 'Design'
